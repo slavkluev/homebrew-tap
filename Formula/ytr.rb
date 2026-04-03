@@ -11,7 +11,7 @@ class Ytr < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/slavkluev/ytr/releases/download/v0.1.1/ytr_0.1.1_darwin_amd64.tar.gz"
-      sha256 "a016ea3334256eec600b138ec660059b4d6be5305c2ca2ff50ed8d55c012370b"
+      sha256 "fc415466b7062015395eb5084c8248977b0a56844c4a0a0c5dad54fd82ace08c"
 
       define_method(:install) do
         bin.install "ytr"
@@ -20,7 +20,7 @@ class Ytr < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/slavkluev/ytr/releases/download/v0.1.1/ytr_0.1.1_darwin_arm64.tar.gz"
-      sha256 "e8da8b06563b748cda7e13d97933cb550c4dab199fa27399d9ac25e5a30c1f4a"
+      sha256 "bff6e546f20f68b66297866cd6527234a943019ea36de8d9a4c9511f393c815a"
 
       define_method(:install) do
         bin.install "ytr"
@@ -32,7 +32,7 @@ class Ytr < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/slavkluev/ytr/releases/download/v0.1.1/ytr_0.1.1_linux_amd64.tar.gz"
-      sha256 "32003e3229f6beaf84316dbaf777ea8cd168d3b9d54e6e8ed6968767f00a8e06"
+      sha256 "348d05ba7a89f38d31d3e710f2893fc91b28f1d240e6f76f98c2641f31c1277e"
       define_method(:install) do
         bin.install "ytr"
         generate_completions_from_executable(bin/"ytr", "completion")
@@ -40,7 +40,7 @@ class Ytr < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/slavkluev/ytr/releases/download/v0.1.1/ytr_0.1.1_linux_arm64.tar.gz"
-      sha256 "30f2d51a436ee2f31a894b8977606df29bb05f96778be14fb34c6f63c82dcdcc"
+      sha256 "2e4d24580422c25755b3e5c00c8ef83787bbab857bd1bf02a508b684b0bbb8a6"
       define_method(:install) do
         bin.install "ytr"
         generate_completions_from_executable(bin/"ytr", "completion")
