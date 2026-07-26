@@ -5,13 +5,13 @@
 class Ytr < Formula
   desc "Yandex Tracker CLI for humans and LLM agents"
   homepage "https://github.com/slavkluev/ytr"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/slavkluev/ytr/releases/download/v0.2.0/ytr_0.2.0_darwin_amd64.tar.gz"
-      sha256 "08dade028fae3feaee7a862c55d14306185abae824d6e0954425edb08337be03"
+      url "https://github.com/slavkluev/ytr/releases/download/v0.2.1/ytr_0.2.1_darwin_amd64.tar.gz"
+      sha256 "2f5db5ed26fb64912521de22d4d3638b23f17c2cc9c96f1edf6c048b59086518"
 
       define_method(:install) do
         bin.install "ytr"
@@ -19,8 +19,8 @@ class Ytr < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/slavkluev/ytr/releases/download/v0.2.0/ytr_0.2.0_darwin_arm64.tar.gz"
-      sha256 "9242db81052a9f732585fb8df67a21cba1d1a5a5b094c1b0e85d91dad2877028"
+      url "https://github.com/slavkluev/ytr/releases/download/v0.2.1/ytr_0.2.1_darwin_arm64.tar.gz"
+      sha256 "4dab24ee1a39a151d8d6124b7212883fc8ef61dea18733cc77cf667465a2bb71"
 
       define_method(:install) do
         bin.install "ytr"
@@ -31,16 +31,16 @@ class Ytr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/slavkluev/ytr/releases/download/v0.2.0/ytr_0.2.0_linux_amd64.tar.gz"
-      sha256 "4b8d7dee8f46e34e930374a226d789d6c2756401100a116b31fc14b9b9effe72"
+      url "https://github.com/slavkluev/ytr/releases/download/v0.2.1/ytr_0.2.1_linux_amd64.tar.gz"
+      sha256 "c22ddd5cecd7b4d21f259a05b37a7219bf10bc79d95b7478d607f37649092847"
       define_method(:install) do
         bin.install "ytr"
         generate_completions_from_executable(bin/"ytr", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/slavkluev/ytr/releases/download/v0.2.0/ytr_0.2.0_linux_arm64.tar.gz"
-      sha256 "6d50aa3c46204f0e2dacf04963a55ad0ac050d5ad9605cbd8d9d7b75583ff3b0"
+      url "https://github.com/slavkluev/ytr/releases/download/v0.2.1/ytr_0.2.1_linux_arm64.tar.gz"
+      sha256 "4256a9ce1c07e4097081625f5f8ab655fec59b0686c7dab4cb03a456401da33b"
       define_method(:install) do
         bin.install "ytr"
         generate_completions_from_executable(bin/"ytr", "completion")
